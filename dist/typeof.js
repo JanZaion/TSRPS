@@ -1,7 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const KNP_1 = require("./KNP");
-//any
-const game = (player, choice) => `${(0, KNP_1.KNP)(choice, player)}`;
-console.log(game('John', 'kamen'));
-console.log(game('Jane', 'papir'));
+const zero = {
+    name: 'Abraham',
+    gamesPlayed: 17,
+};
+const one = {
+    name: 'John',
+    gamesPlayed: 7855646,
+};
+const two = {
+    name: 'Jane',
+    gamesPlayed: 6,
+};
+const game = (player, choice) => `${player.name} ma za sebou ${player.gamesPlayed} her, ${(0, KNP_1.KNP)(choice, player.name)}`;
+console.log(game(one, 'kamen'));
+console.log(game(two, 'papir'));
